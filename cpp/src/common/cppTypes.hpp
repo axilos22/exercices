@@ -7,10 +7,7 @@ class CharType : public NumberBased
 public:
     CharType() : NumberBased("Char"){};
     unsigned long long int maxValue() { return CHAR_MAX; }
-    long long int minValue()
-    {
-        return CHAR_MIN;
-    }
+    long long int minValue() { return CHAR_MIN; }
     size_t size() { return sizeof(char); }
 };
 
