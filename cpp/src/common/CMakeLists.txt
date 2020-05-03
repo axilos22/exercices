@@ -2,6 +2,7 @@ project(common VERSION 0.1.0)
 
 add_library(${PROJECT_NAME}
     abstractTypes.cpp
+    inputParser.cpp
 )
 
 target_include_directories(${PROJECT_NAME}
