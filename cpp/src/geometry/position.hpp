@@ -8,13 +8,13 @@ protected:
 
 public:
     Position1D(numeric x) : x(x){};
-    ~Position1D(){};
+    ~Position1D() { delete &x; };
     inline numeric GetX() const { return x; }
-    inline void IncreaseX(numeric increment) { x += increment;}
-    inline void DecreaseX(numeric increment) { x -= increment;}
+    inline void IncreaseX(numeric increment) { x += increment; }
+    inline void DecreaseX(numeric increment) { x -= increment; }
     inline numeric ComputeAbsoluteDistance(const Position1D &pos) const
     {
-        return abs(GetX() - pos.GetX());
+        return abs(ComputeDistance(pos));
     }
     inline numeric ComputeDistance(const Position1D &pos) const
     {
@@ -29,8 +29,8 @@ protected:
     numeric y;
 
 public:
-    Position2D(numeric x, numeric y);
-    ~Position2D();
+    Position2D(numeric x, numeric y) : Position1D<numeric>(x), y(y){};
+    ~Position2D() { delete &y; };
     inline numeric GetY() const { return y; };
     inline numeric ComputeDistance(const Position2D &pos) const
     {
