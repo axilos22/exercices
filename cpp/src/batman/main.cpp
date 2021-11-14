@@ -10,11 +10,11 @@ class Position2D {
         int x=0, y=0;
     public:
         Position2D(int x, int y): x(x), y(y){};
-        Position2D(Position2D &pos): x(pos.x), y(pos.y){};
-        void setX(int value){x=value;}
-        void setY(int value){y=value;}
-        unsigned int getX(){return x;}
-        unsigned int getY(){return y;}
+        Position2D(const Position2D &pos): x(pos.x), y(pos.y){};
+        inline void setX(int value){x=value;}
+        inline void setY(int value){y=value;}
+        int getX(){return x;}
+        int getY(){return y;}
         string getPosition() {return to_string(x)+" "+to_string(y);}
 };
 
