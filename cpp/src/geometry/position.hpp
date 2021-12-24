@@ -1,38 +1,38 @@
 #include <math.h>
 
 template <typename numeric>
-class Position1D
+class CartesianPosition1D
 {
 protected:
     numeric x;
 
 public:
-    Position1D(numeric x) : x(x){};
-    ~Position1D() { delete &x; };
+    CartesianPosition1D(numeric x) : x(x){};
+    ~CartesianPosition1D() { delete &x; };
     inline numeric GetX() const { return x; }
-    inline void IncreaseX(numeric increment) { x += increment; }
-    inline void DecreaseX(numeric increment) { x -= increment; }
-    inline numeric ComputeAbsoluteDistance(const Position1D &pos) const
+    inline void IncreaseX(const numeric amount) { x += amount; }
+    inline void DecreaseX(const numeric amount) { x -= amount; }
+    inline numeric ComputeAbsoluteDistance(const CartesianPosition1D &pos) const
     {
         return abs(ComputeDistance(pos));
     }
-    inline numeric ComputeDistance(const Position1D &pos) const
+    inline numeric ComputeDistance(const CartesianPosition1D &pos) const
     {
         return GetX() - pos.GetX();
     }
 };
 
 template <typename numeric>
-class Position2D : public Position1D<numeric>
+class CartesianPosition2D : public CartesianPosition1D<numeric>
 {
 protected:
     numeric y;
 
 public:
-    Position2D(numeric x, numeric y) : Position1D<numeric>(x), y(y){};
-    ~Position2D() { delete &y; };
+    CartesianPosition2D(numeric x, numeric y) : CartesianPosition1D<numeric>(x), y(y){};
+    ~CartesianPosition2D() { delete &y; };
     inline numeric GetY() const { return y; };
-    inline numeric ComputeDistance(const Position2D &pos) const
+    inline numeric ComputeDistance(const CartesianPosition2D &pos) const
     {
         numeric x_term = (this.GetX() - pos.GetX()) * (this.GetX() - pos.GetX());
         numeric y_term = (GetY() - pos.GetY()) * (GetY() - pos.GetY());

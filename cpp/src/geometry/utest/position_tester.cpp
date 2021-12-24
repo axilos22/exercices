@@ -26,7 +26,7 @@ enum RetCode
 
 int oned_int_create(int position)
 {
-    Position1D<int> test_pose(position);
+    CartesianPosition1D<int> test_pose(position);
     if (position == test_pose.GetX())
         return Ok;
     else
@@ -35,7 +35,7 @@ int oned_int_create(int position)
 
 int oned_int_increase()
 {
-    Position1D<int> test_pose(123);
+    CartesianPosition1D<int> test_pose(123);
     test_pose.IncreaseX(10);
     if (133 == test_pose.GetX())
         return Ok;
@@ -45,7 +45,7 @@ int oned_int_increase()
 
 int oned_int_decrease()
 {
-    Position1D<int> test_pose(123);
+    CartesianPosition1D<int> test_pose(123);
     test_pose.DecreaseX(10);
     if (113 == test_pose.GetX())
         return Ok;
@@ -55,7 +55,7 @@ int oned_int_decrease()
 
 int oned_int_distance(int pos1, int pos2)
 {
-    Position1D<int> test_pose(pos1), other_pose(pos2);
+    CartesianPosition1D<int> test_pose(pos1), other_pose(pos2);
     auto distance = test_pose.ComputeDistance(other_pose);
     if (distance == pos1 - pos2)
         return Ok;
@@ -65,7 +65,7 @@ int oned_int_distance(int pos1, int pos2)
 
 int oned_int_absDistance(int pos1, int pos2)
 {
-    Position1D<int> test_pose(pos1), other_pose(pos2);
+    CartesianPosition1D<int> test_pose(pos1), other_pose(pos2);
     auto distance = test_pose.ComputeAbsoluteDistance(other_pose);
     if (distance == abs(pos1 - pos2))
         return Ok;
@@ -75,7 +75,7 @@ int oned_int_absDistance(int pos1, int pos2)
 
 int oned_double_distance(double pos1, double pos2)
 {
-    Position1D<double> test_pose(pos1), other_pose(pos2);
+    CartesianPosition1D<double> test_pose(pos1), other_pose(pos2);
     auto distance = test_pose.ComputeDistance(other_pose);
     if (distance == pos1 - pos2)
         return Ok;
