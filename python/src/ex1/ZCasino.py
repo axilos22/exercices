@@ -176,5 +176,6 @@ class Game:
                 self.keepPlaying = False
                 print("[GAME] Thank you for playing, we hope so see you soon !")
 
-game = Game()
-game.start()
+if __name__ == "__main__":
+    game = Game()
+    game.start()
