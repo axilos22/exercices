@@ -106,10 +106,10 @@ def get_rein_damage_tab(size):
 
 def get_dva_damage_tab(size):
     damage_per_shot = 2
-    shot_fired_per_action = 1.0
-    rate_of_fire = 6.67 / shot_fired_per_action
+    shot_fired_per_action = 11.0
+    rate_of_fire = 6.67
 
-    damage_per_second = damage_per_shot * rate_of_fire
+    damage_per_second = damage_per_shot * shot_fired_per_action * rate_of_fire
     accumulated_damage = 0
     damage_tab = [0]
     for i in range(1, size):
