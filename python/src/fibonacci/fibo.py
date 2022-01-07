@@ -21,7 +21,7 @@ def fibonacci(rank: int) -> int:
 
 
 if __name__ == "__main__":
-    n = 38
+    n = 40
     start = timer()
     print(f"Fibonacci of {n} = {memoized_fibonacci(n)}")
     end = timer()
