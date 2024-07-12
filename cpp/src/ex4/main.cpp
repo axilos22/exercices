@@ -73,7 +73,7 @@ void displayDatatypeSize(NumberBased* type)
 
 void displayDatatypeLimit(NumberBased* type)
 {
-    cout << "Limits values are [ " << type->maxValue() << " ; " << type->minValue() << " ]" << endl;
+    cout << "Limits values are [ " << type->minValue() << " ; " << type->maxValue() << " ]" << endl;
 }
 
 
