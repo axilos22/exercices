@@ -4,7 +4,7 @@
 
 using namespace std;
 
-enum cppTypes {
+enum class cppTypes {
     CHAR,
     SHORT,
     INT,
@@ -16,7 +16,7 @@ enum cppTypes {
     BOOL
 };
 
-const vector<cppTypes> displayedCppTypes = {CHAR, SHORT, INT, LONG, LONGLONG, FLOAT, DOUBLE, LONGDOUBLE, BOOL};
+const vector<cppTypes> displayedCppTypes = { cppTypes::CHAR, cppTypes::SHORT, cppTypes::INT, cppTypes::LONG, cppTypes::LONGLONG, cppTypes::FLOAT, cppTypes::DOUBLE, cppTypes::LONGDOUBLE, cppTypes::BOOL};
 
 unsigned int sizeofType(cppTypes typeName);
 void display(cppTypes type, size_t size);
@@ -39,39 +39,39 @@ unsigned int sizeofType(cppTypes typeName) {
     size_t size = 0;
     switch (typeName)
     {
-    case CHAR:
+    case cppTypes::CHAR:
         size= sizeof(char);
         break;
 
-    case SHORT:
+    case cppTypes::SHORT:
         size = sizeof(short);
         break;
 
-    case INT:
+    case cppTypes::INT:
         size = sizeof(int);
         break;
 
-    case LONG:
+    case cppTypes::LONG:
         size = sizeof(long);
         break;
 
-    case LONGLONG:
+    case cppTypes::LONGLONG:
         size = sizeof(long long);
         break;
 
-    case FLOAT:
+    case cppTypes::FLOAT:
         size = sizeof(float);
         break;
 
-    case DOUBLE:
+    case cppTypes::DOUBLE:
         size = sizeof(double);
         break;
 
-    case LONGDOUBLE:
+    case cppTypes::LONGDOUBLE:
         size = sizeof(long double);
         break;
 
-    case BOOL:
+    case cppTypes::BOOL:
         size= sizeof(bool);
         break;
 
@@ -92,39 +92,39 @@ string displayType(cppTypes type) {
     string str_type = "None";
     switch (type)
     {
-    case CHAR:
+    case cppTypes::CHAR:
         str_type = "char";
         break;
 
-    case SHORT:
+    case cppTypes::SHORT:
         str_type = "short";
         break;
 
-    case INT:
+    case cppTypes::INT:
         str_type = "int";
         break;
 
-    case LONG:
+    case cppTypes::LONG:
         str_type = "long";
         break;
 
-    case LONGLONG:
+    case cppTypes::LONGLONG:
         str_type = "long long";
         break;
 
-    case FLOAT:
+    case cppTypes::FLOAT:
         str_type = "float";
         break;
 
-    case DOUBLE:
+    case cppTypes::DOUBLE:
         str_type = "double";
         break;
 
-    case LONGDOUBLE:
+    case cppTypes::LONGDOUBLE:
         str_type = "long double";
         break;
 
-    case BOOL:
+    case cppTypes::BOOL:
         str_type = "bool";
         break;
 
