@@ -18,7 +18,7 @@ enum class cppTypes {
 
 const vector<cppTypes> displayedCppTypes = { cppTypes::CHAR, cppTypes::SHORT, cppTypes::INT, cppTypes::LONG, cppTypes::LONGLONG, cppTypes::FLOAT, cppTypes::DOUBLE, cppTypes::LONGDOUBLE, cppTypes::BOOL};
 
-unsigned int sizeofType(cppTypes typeName);
+size_t sizeofType(cppTypes typeName);
 void display(cppTypes type, size_t size);
 string displayType(cppTypes type);
 
@@ -35,7 +35,7 @@ int main()
     }
 }
 
-unsigned int sizeofType(cppTypes typeName) {
+size_t sizeofType(cppTypes typeName) {
     size_t size = 0;
     switch (typeName)
     {
