@@ -1,5 +1,6 @@
 # Common
 build/*
+out/build
 
 # Prerequisites
 *.d
@@ -41,6 +42,10 @@ build/*
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+
+# Visual Studio
+.vs/
+
 # Local History for Visual Studio Code
 .history/
 
@@ -53,3 +58,4 @@ build/*
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+.idea/*
