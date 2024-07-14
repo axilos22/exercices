@@ -51,6 +51,7 @@ out/build
 
 ## Python
 *.pyc
+**/__init__.py
 
 # User-specific stuff
 .idea/**/workspace.xml
@@ -59,3 +60,4 @@ out/build
 .idea/**/dictionaries
 .idea/**/shelf
 .idea/*
+
